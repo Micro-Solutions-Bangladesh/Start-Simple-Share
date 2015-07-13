@@ -1,4 +1,4 @@
-# Start-Simple-Share
+# Start Simple Share
 Start Simple Share plugin helps you to share articles to social network like-facebook, twitter, pinterest, stumbleupon, tumblr, linkedin.
 
 # Description
@@ -10,3 +10,5 @@ Start Simple Share plugin (sssp) helps you to share articles to social network l
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Cheers! Now you have a menu item to the admin panel to configure your share links :)
 
+# Example
+Please visit any articles at http://z2a.co/ for live action :)
