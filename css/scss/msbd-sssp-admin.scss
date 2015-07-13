@@ -1,0 +1,93 @@
+.msbd-sssp {
+
+    .postbox .hndle {
+        margin: 0;
+        padding: 8px 12px;
+    }
+    
+    .content-container {
+        float: left;
+        min-width: 463px;
+        width: 73%;
+    }
+    .sidebar-container {
+        float: right;
+        min-width: 280px;
+        width: 25%;
+    }
+    
+    .form-table {
+        width: 100%;
+        overflow: hidden;
+
+        .form-row {
+            clear: both;
+            overflow: hidden;
+            padding: 3px 0;
+            width: 100%;
+        }
+        .text {
+            width: 100%;
+        }
+        .select {
+            width: 100%;
+        }
+    }
+    
+
+    .msbd-logo {
+        padding: 5px 0;
+        
+        img {
+            max-width: 100%;
+        }
+    }
+
+    // GRID
+    .grid_1,
+    .grid_2,
+    .grid_3,
+    .grid_4,
+    .grid_5,
+    .grid_6,
+    .grid_7,
+    .grid_8,
+    .grid_9,
+    .grid_10,
+    .grid_11,
+    .grid_12 {
+        display:inline;
+        float: left;
+        position: relative;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    .grid_1 { width:6.333%; }
+    .grid_2 { width:14.667%; }
+    .grid_3 { width:23.0%; }
+    .grid_4 { width:31.333%; }
+    .grid_5 { width:39.667%; }
+    .grid_6 { width:48.0%; }
+    .grid_7 { width:56.333%; }
+    .grid_8 { width:64.667%; }
+    .grid_9 { width:73.0%; }
+    .grid_10 { width:81.333%; }
+    .grid_11 { width:89.667%; }
+    .grid_12 { width:98.0%; }
+    .grid_full { width:100%; }
+
+    .grid_full:after,
+    .grid_12:after {
+        content: "";
+        clear: both;
+    }
+
+    .notice.success {
+        border-color: #00ff00;
+    }
+}
+
+.msbd-social-media-links-wrapper {
+    padding: 5px 0;
+}

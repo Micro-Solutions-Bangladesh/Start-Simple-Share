@@ -1,0 +1,231 @@
+
+/*= Vars =*/
+$pinterest-color: #d3282c;
+$fb-color: #334e94;
+$twitter-color: #458fc3;
+$gplus-color: #cb3724;
+$linkedin-color: #0175af;
+$reddit-color: #0473c3;
+$stumbleupon-color: #eb4924;
+$tumblr-color: #36465D;
+$email-color: #d74440;
+$print-color: #d74440;
+
+
+
+/*= Mixins =*/
+
+/**/
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+/**/
+@mixin social-button($bg, $is-hover, $font-color: rgba(255,255,255, 0.8)) {
+    
+    $font-color-var: #fff; //Force white color font
+    
+    @if $is-hover == "true" {
+        background: -webkit-gradient(linear, 0 0, 0 0, from(lighten($bg, 10%)), to($bg));
+        background: -moz-linear-gradient(lighten($bg, 10), $bg);
+        background: linear-gradient(lighten($bg, 10), $bg);
+    }
+    @else {
+        color: $font-color-var;
+        background: $bg;
+        background: -webkit-gradient(linear, 0 0, 0 0, from($bg), to(lighten($bg, 10)));
+        background: -moz-linear-gradient($bg, lighten($bg, 10));
+        background: linear-gradient($bg, lighten($bg, 10));
+        
+        border-top: 1px solid darken($bg, 5);
+        
+        text-shadow: 0 1px 1px rgba(255,255,255,.35);
+        
+        box-shadow: 0 -5px 0 darken($bg, 7) inset;
+    }
+}
+
+
+
+
+
+/*= Styles =*/
+
+a.s3d  {
+    @include border-radius(5px);
+            
+    display: inline-block;
+    font: 700 24px/36px 'Arial', Helvetica, Clean, sans-serif;
+    padding: 1px 12px 3px;
+    position: relative;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(255,255,255,.35);
+   
+    color: rgba(255, 255, 255, 0.698);
+    margin: 0 0 0 5px;
+    
+    &:first-child {
+        margin-left: 0;
+    }
+    
+    &.no-counter {
+        height: 41px;
+        width: 50px;
+        span:first-child {
+            left: 0;
+            position: relative;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+}
+
+.s3d span {
+    display: block;
+    float: left;
+}
+.s3d span:first-child {
+    left: 10px;
+    position: absolute;
+}
+.s3d .counter {    
+    padding-left: 30px;
+    font-size: 14px;
+}
+
+
+/*= Buttons =*/
+
+/**
+ * Facebook
+ */
+a.facebook {
+    @include social-button($fb-color, "false", #151f35);
+}
+a.facebook:hover, a.facebook:active {
+    @include social-button($fb-color, "true");
+}
+
+
+
+/**
+ * Google+
+ */
+ a.google {
+    @include social-button($gplus-color, "false", #151f35);
+}
+a.google:hover, a.google:active {
+    @include social-button($gplus-color, "true");
+}
+
+
+
+
+/**
+ * Twitter
+ */
+a.twitter {
+    @include social-button(#458fc3, "false", rgba(25,45,55,.9));
+}
+a.twitter:hover, a.twitter:active {
+    @include social-button(#458fc3, "true");
+}
+
+
+
+
+/**
+ * Pinterest
+ */
+a.pinterest {
+    @include social-button($pinterest-color, "false", rgba(25,45,55,.9));
+}
+a.pinterest:hover, a.pinterest:active {
+    @include social-button($pinterest-color, "true");
+}
+
+
+
+
+/**
+ * Reddit
+ */
+a.reddit {
+    @include social-button($reddit-color, "false", rgba(25,45,55,.9));
+}
+a.reddit:hover, a.reddit:active {
+    @include social-button($reddit-color, "true");
+}
+
+
+
+
+/**
+ * Linkedin
+ */
+a.linkedin {
+    @include social-button($linkedin-color, "false", rgba(25,45,55,.9));
+}
+a.linkedin:hover, a.linkedin:active {
+    @include social-button($linkedin-color, "true");
+}
+
+
+
+
+/**
+ * Stumbleupon
+ */
+a.stumbleupon {
+    @include social-button($stumbleupon-color, "false", rgba(25,45,55,.9));
+}
+a.stumbleupon:hover, a.stumbleupon:active {
+    @include social-button($stumbleupon-color, "true");
+}
+
+
+
+
+
+/**
+ * Tumblr
+ */
+a.tumblr {
+    @include social-button($tumblr-color, "false", rgba(25,45,55,.9));
+}
+a.tumblr:hover, a.tumblr:active {
+    @include social-button($tumblr-color, "true");
+}
+
+
+
+
+/**
+ * Email
+ */
+a.email {
+    @include social-button($email-color, "false", rgba(25,45,55,.9));
+}
+a.email:hover, a.email:active {
+    @include social-button($email-color, "true");
+}
+
+
+
+
+/**
+ * Print
+ */
+a.print {
+    @include social-button($print-color, "false", rgba(25,45,55,.9));
+}
+a.print:hover, a.print:active {
+    @include social-button($print-color, "true");
+}
+    
+    
+    
